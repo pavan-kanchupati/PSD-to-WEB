@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Shopping Cart</title>
+    
+    <!------ Bootstrap CSS CDN link------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-------Main CSS Link-------->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!------owl carousel------>
+    <link rel="stylesheet" href="./css/owl-css/owl.carousel.css">
+    <link rel="stylesheet" href="./css/owl-css/owl.theme.default.css">
+    <link rel="stylesheet" href="./css/owl-css/owl-custom.css">
+
+    <!---------Hero carousel ---------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
+    <link rel="stylesheet" href="./css//hero-carousel/hero-carousel.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+           <!------ Logo ------->
+            <a href="#">
+                <img  src="./img/logo.jpg" >
+            </a>
+           
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav" style="margin-left: 500px;">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown link
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+          </nav>
+    </div>
+    <!----- navbar ------>
+<!---<header id="header" class="header">
+    <div class="container">
+        <div class="row">
+            
+            <div class="four columns"> 
+                <img src="img/logo.jpg" id="logo">
+            </div>
+
+            <div class="two columns u-pull-right">
+                <ul>
+                    <li class="submenu">
+                        <img src="img/cart.png" id="img-cart">
+                        <div id="shopping-cart">
+                            <table id="cart-content" class="u-full-width">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><img src="img/course1.jpg" width="120"></td>
+                                        <td>HTML5, CSS3, JavaScript for beginners</td>
+                                        <td>$15</td>
+                                        <td><a href="#" class="remove">X</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="img/course2.jpg" width="120">
+                                        </td>
+                                        <td>Cooking Course</td>
+                                        <td>$15</td>
+                                        <td>
+                                            <a href="#" class="remove">X</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#" id="clear-cart" class="button u-full-width">Clear Cart</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </header>--->
+
+
+    <!-------- Start Hero -------->
+    <div id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="six columns">
+                    <div class="hero-content">
+                        <h2 id="learn">Learn Something Today</h2>
+                        <p class="tagline"> Special Offer, any course $15</p>
+                        <form action="#" id="search" method="post" class="form">
+                            <input class="u-full-width" type="text" placeholder="What Do You Want To Learn? " id="search-course">
+                            <input type="submit" id="submit-search-course" class="submit-search-course">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!------ End Hero--------->
+
+    <!--------Second Navbar--------->
+    <div class="main-bar">
+        <div class="container">
+            <div class="row">
+                <div class="four columns icon icon1">
+                    <p>20,000 online courses <br>Learn new skills</p>
+                </div>
+                <div class="four columns icon icon2">
+                    <p>Expert Instructors<br>Learn with different teach styles</p>
+                </div>
+                <div class="four columns icon icon3">
+                    <p>Lifetime access <br>learn at your own pace</p>
+                </div>
+            </div>
+        </div>
+    </div>  <!-------- End Second Navbar--------->
+
+
+    <!------- Start Online Course ------->
+    <div id="courses-list" class="container">
+        <h1 id="heading" class="heading">Online Courses</h1>
+        
+        <!--------- First Row card----------->
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/course1.jpg" class="course-image u-full-width">
+                    <div class="info-card">
+                        <h4>HTML5, CSS3, JavaScript for beginners</h4>
+                        <p>Juan Pedro</p>
+                        <img src="img/stars.png">
+                        <p class="price">$200  <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="1">Add to Cart</a>
+                    </div>
+                </div> <!--.card-->
+            </div> <!----- columns ----->
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/course2.jpg" class="course-image u-full-width">
+                    <div class="info-card">
+                        <h4>Cooking Course</h4>
+                        <p>Juan Pedro</p>
+                        <img src="img/stars.png">
+                        <p class="price">$200  <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="2">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/course3.jpg" class="course-image u-full-width">
+                    <div class="info-card">
+                        <h4>Guitar for beginners</h4>
+                        <p>Juan Pedro</p>
+                        <img src="img/stars.png">
+                        <p class="price">$200  <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="3">Add to Cart</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+    
+        <!--------- Second Row card-----
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/course4.jpg" class="course-image u-full-width">
+                    <div class="info-card">
+                        <h4>Orchard at home</h4>
+                        <p>Juan Pedro</p>
+                        <img src="img/stars.png">
+                        <p class="price">$200  <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="4">Add to Cart</a>
+                    </div>
+                </div> 
+            </div>
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/course5.jpg" class="course-image u-full-width">
+                    <div class="info-card">
+                        <h4>Home Decor with recycled products</h4>
+                        <p>Juan Pedro</p>
+                        <img src="img/stars.png">
+                        <p class="price">$200  <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="5">Add to Cart</a>
+                    </div>
+                </div> 
+            </div>
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/course1.jpg" class="course-image u-full-width">
+                    <div class="info-card">
+                        <h4>Web Design for beginners</h4>
+                        <p>Juan Pedro</p>
+                        <img src="img/stars.png">
+                        <p class="price">$200  <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="6">Add to Cart</a>
+                    </div>
+                </div> 
+            </div>
+        </div>------>
+       
+        <!--------- Third Row card-----
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/course2.jpg" class="course-image u-full-width">
+                    <div class="info-card">
+                        <h4>Learn to cook mexican food</h4>
+                        <p>Juan Pedro</p>
+                        <img src="img/stars.png">
+                        <p class="price">$200  <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="7">Add to Cart</a>
+                    </div>
+                </div> 
+            </div>
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/course3.jpg" class="course-image u-full-width">
+                    <div class="info-card">
+                        <h4>Build a Music Studio</h4>
+                        <p>Juan Pedro</p>
+                        <img src="img/stars.png">
+                        <p class="price">$200  <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="8">Add to Cart</a>
+                    </div>
+                </div> 
+            </div>
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/course4.jpg" class="course-image u-full-width">
+                    <div class="info-card">
+                        <h4>Harvest your own fruits and vegetables</h4>
+                        <p>Juan Pedro</p>
+                        <img src="img/stars.png">
+                        <p class="price">$200  <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="9">Add to Cart</a>
+                    </div>
+                </div> 
+            </div>
+        </div> ------>
+       
+        <!--------- Four Row card------
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/course5.jpg" class="course-image u-full-width">
+                    <div class="info-card">
+                        <h4>Cook home cookies</h4>
+                        <p>Juan Pedro</p>
+                        <img src="img/stars.png">
+                        <p class="price">$200  <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="10">Add to Cart</a>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/course1.jpg" class="course-image u-full-width">
+                    <div class="info-card">
+                        <h4>Modern JavaScript</h4>
+                        <p>Juan Pedro</p>
+                        <img src="img/stars.png">
+                        <p class="price">$200  <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="11">Add to Cart</a>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/course2.jpg" class="course-image u-full-width">
+                    <div class="info-card">
+                        <h4>100 Natural recipes</h4>
+                        <p>Juan Pedro</p>
+                        <img src="img/stars.png">
+                        <p class="price">$200  <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input add-to-cart" data-id="12">Add to Cart</a>
+                    </div>
+                </div> 
+            </div>
+        </div> 
+    </div>----->
+    <!------- End Online Course ------->
+
+
+    <!------------------------- Start carousel ------------------------------->
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12 text-center"><h2>Owl carousel</h2></div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="./img/carousel/image.jpg" alt="flower1"></div>
+                <div class="item"><img src="./img/carousel/image.jpg" alt="flower1"></div>
+                <div class="item"><img src="./img/carousel/image.jpg" alt="flower3"></div>
+                <div class="item"><img src="./img/carousel/image.jpg" alt="flower4"></div>
+                <div class="item"><img src="./img/carousel/image.jpg" alt="flower5"></div>
+                <div class="item"><img src="./img/carousel/image.jpg" alt="flower6"></div>
+                <div class="item"><img src="./img/carousel/image.jpg" alt="flower7"></div>
+                <div class="item"><img src="./img/carousel/image.jpg" alt="flower8"></div>
+                <div class="item"><img src="./img/carousel/image.jpg" alt="flower9"></div>
+                <div class="item"><img src="./img/carousel/image.jpg" alt="flower10"></div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------- End carousel ------------------------------->
+
+
+    <!--------- Start Hero Carousel ----------->
+    <div class="container-fluid">
+        <!-- Flickity HTML init -->
+        <div class="gallery js-flickity">
+            <div class="gallery-cell"></div>
+            <div class="gallery-cell"></div>
+            <div class="gallery-cell"></div>
+            <div class="gallery-cell"></div>
+            <div class="gallery-cell"></div>
+        </div>
+    </div> 
+
+    <!--------- End Hero Carousel ----------->
+
+    <!--------- Start Two partitions ----------->
+    <div class="container-fluid">
+        <h1 style="text-align: center; margin-top: 20px;">two partitions</h1>
+        <div class="row">
+            <div class="col-md-6 p-0">
+                <img src="./img/course4.jpg" style="width: 100%; height: 100%;">
+            </div>
+            <div class="col-md-6">
+                <div class="b-title" style="padding: 20px;">
+                    <h2>About Me</h2>
+                </div>
+                <div class="b-content" style="padding: 20px;">
+                    <p>Here we present some free one-page PSD web templates to help you create stunning one-page websites.
+                         These websites provide just the right amount of information to a site visitor for them to make a 
+                         decision and act upon it. They have no additional pages and try to remove clutter as much as possible,
+                         using the user’s attention on the most important content. It is difficult to cater to everyone, so we’ve
+                        prepared 23 templates that could very well take the challenge and give you the solution you are looking
+                        for. Whether you’re building a portfolio or a business page, you can find multiple templates here that 
+                        will help you out in crafting the perfect website.</p>
+                </div>
+                <div>
+                    <div class="row">
+                        <input type="button" value="button1">
+                        <input type="button" value="button2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------- End Two partitions ----------->
+
+
+    <!------- Start Footer ------->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="four columns">
+                    <nav id="primary" class="menu">
+                        <a class="link" href="#">For Business</a>
+                        <a class="link" href="#">Become an Instructor</a>
+                        <a class="link" href="#">Mobile Applications</a>
+                        <a class="link" href="#">Support</a>
+                        <a class="link" href="#">Help</a>
+                    </nav>
+                </div>
+
+                <div class="four columns">
+                    <nav id="primary" class="menu">
+                        <a class="link" href="#">For Business</a>
+                        <a class="link" href="#">Become an Instructor</a>
+                        <a class="link" href="#">Mobile Applications</a>
+                        <a class="link" href="#">Support</a>
+                        <a class="link" href="#">Help</a>
+                    </nav>
+                </div>
+
+                <div class="four columns">
+                    <nav id="secondary" class="menu">
+                        <a class="link" href="#">About Us</a>
+                        <a class="link" href="#">Work with us</a>
+                        <a class="link" href="#">Blog</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!------- End Footer ------->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!------owl carousel------>
+<script src="js/owl-js/owl.carousel.js"></script>
+<script src="js/owl-js/owl-carousel2.js"></script>
+
+<!------- Hero carousel ------------>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+
+<script src="js/app.js"></script>
+
+
+</body>
+</html>
